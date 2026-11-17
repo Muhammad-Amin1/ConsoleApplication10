@@ -24,6 +24,9 @@
     <ClCompile Include="Autorization.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Storage.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
     <ClCompile Include="Accaunt.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>

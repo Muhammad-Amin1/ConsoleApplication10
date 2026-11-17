@@ -3,9 +3,18 @@
 
 #include "ServiceFunc.h"
 #include "Accaunt.h"
+#include "Storage.h"
 
 void Start();
 bool Login();
+
+void SuperAdminMenu();
+void AdminMenu();
+void UserMenu();
+
+
+
+
 
 
 
