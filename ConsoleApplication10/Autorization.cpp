@@ -75,10 +75,13 @@ bool Login()
 					currentStatus = statusArr[i];
 
 					Sleep(1500);
+					return true;
 					
 				}
 			}
-			return true;
+			
+			std::wcout << L"Неверный логин или пароль. Повторите попытку";
+			Sleep(1500);
 
 		}
 	}
@@ -104,55 +107,52 @@ void SuperAdminMenu()
 		std::wcout << L"0 - Выход";
 		Getline(choose);
 
-		if(choose == L"1")
+		if (choose == L"1")
 		{
 
 		}
-
-		else if(choose == L"2")
+		else if (choose == L"2")
 		{
 			ShowStorage();
 		}
-
-		else if(choose == L"3")
+		else if (choose == L"3")
+		{
+			AddProduct();
+		}
+		else if (choose == L"4")
+		{
+			removeProduct();
+		}
+		else if (choose == L"5")
 		{
 
 		}
-
-		else if(choose == L"4")
+		else if (choose == L"6")
 		{
 
 		}
-
-		else if(choose == L"5")
+		else if (choose == L"7")
 		{
 
 		}
-
-		else if(choose == L"6")
+		else if (choose == L"8")
 		{
 
 		}
-
-		else if(choose == L"7")
+		else if (choose == L"9")
+		{
+			
+		}
+		else if (choose == L"0")
 		{
 
 		}
-
-		else if(choose == L"8")
-		{
-
-		}
-
-		else if(choose == L"0")
-		{
-
-		}
-
 		else
 		{
 			Err();
 		}
+
+
 	}
 }
 

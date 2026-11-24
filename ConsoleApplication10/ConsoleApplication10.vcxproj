@@ -149,6 +149,7 @@
     </ClCompile>
     <ClCompile Include="ServiceFunc.cpp" />
     <ClCompile Include="Storage.cpp" />
+    <ClCompile Include="Supplier.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Accaunt.h" />
@@ -156,6 +157,7 @@
     <ClInclude Include="Seling.h" />
     <ClInclude Include="ServiceFunc.h" />
     <ClInclude Include="Storage.h" />
+    <ClInclude Include="Supplier.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

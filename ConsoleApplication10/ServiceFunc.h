@@ -5,9 +5,11 @@
 #include <string>
 #include <Windows.h>
 #include <iomanip>
+#include <cwctype>
 
 void Getline(std::wstring& str);
-
+bool IsNumber(const std::wstring& str);
+bool isNotSame(const std::wstring& str, std::wstring* nameArr, size_t arrSize);
 inline void Err()
 {
 	std::wcout << L"Некорректный ввод\n\n";
@@ -24,10 +26,17 @@ void FillArray(ArrType* dymanicArr, ArrType* staticArr, size_t commonSize)
 	}
 }
 
-
-
-
-
+template <class ArrType> 
+void ArrPushBack(ArrType*& arr, size_t arrSize)
+{
+	ArrType* temp = new ArrType[arrSize]{};
+	for (size_t i = 0; i < arrSize - 1; i++)
+	{
+		temp[i] = arr[i];
+	}
+	std::swap(arr, temp);
+	delete[]temp;
+}
 
 
 
