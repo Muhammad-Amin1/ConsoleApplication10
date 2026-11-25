@@ -6,6 +6,7 @@
 #include <Windows.h>
 #include <iomanip>
 #include <cwctype>
+#include <unordered_set>
 
 void Getline(std::wstring& str);
 bool IsNumber(const std::wstring& str);
@@ -29,6 +30,7 @@ void FillArray(ArrType* dymanicArr, ArrType* staticArr, size_t commonSize)
 template <class ArrType> 
 void ArrPushBack(ArrType*& arr, size_t arrSize)
 {
+	arrSize++;
 	ArrType* temp = new ArrType[arrSize]{};
 	for (size_t i = 0; i < arrSize - 1; i++)
 	{
@@ -38,7 +40,22 @@ void ArrPushBack(ArrType*& arr, size_t arrSize)
 	delete[]temp;
 }
 
+template <class ArrType>
+void ArrDeleteByIndex(ArrType*& arr, size_t arrSize, size_t index)
+{
+	arrSize--;
+	ArrType* temp = new ArrType[arrSize]{};
+	for (size_t i = 0, j = 0; i < arrSize; i++,j++)
+	{
+		if (j == index)
+		{
+			j++;
+		}
 
-
+		temp[i] = arr[j];
+	}
+	std::swap(arr, temp);
+	delete[]temp;
+}
 
 #endif // !_SERVICE_FUNC_HPP_

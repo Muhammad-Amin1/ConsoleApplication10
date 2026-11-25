@@ -1,7 +1,7 @@
 #ifndef _STORAGE_HPP_
 #define _STORAGE_HPP_
 
-#include "ServiceFunc.h"
+#include "Accaunt.h"
 
 extern size_t sizeSt;
 extern size_t* idArr;
@@ -24,6 +24,9 @@ void ChangePrice();
 
 void ChangeStorage();
 void AddNewProduct();
+void ChangeProductName();
+void DeleteProduct();
+void ChangeStorageLimits();
 
 
 
